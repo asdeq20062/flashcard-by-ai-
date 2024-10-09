@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Vocabulary Flashcards</h1>
+        <div class="file-input-container">
+            <input type="file" id="fileInput" accept=".xlsx, .xls">
+            <label for="fileInput" class="file-label">Choose Excel File</label>
+            <button id="refreshButton" class="refresh-button">Refresh</button>
+        </div>
+        <div id="flashcard">
+            <div class="word-container">
+                <h2 id="engWord"></h2>
+                <button id="playPronunciation" class="pronunciation-button">🔊 (P)</button>
+            </div>
+            <p id="wordType"></p>
+            <div id="hiddenContent" class="hidden">
+                <!-- Content will be dynamically added here -->
+            </div>
+        </div>
+        <div class="button-container">
+            <button id="previousButton" class="action-button">Previous (←)</button>
+            <button id="showButton" class="action-button">Show (S)</button>
+            <button id="nextButton" class="action-button">Next (→)</button>
+            <button id="importButton" class="action-button">Import Last Stats</button>
+        </div>
+        <div class="response-container">
+            <button id="knowButton" class="response-button know">Know (N)</button>
+            <button id="dontKnowButton" class="response-button dont-know">Don't Know (M)</button>
+        </div>
+        <div class="save-container">
+            <button id="saveButton" class="save-button">Save Results</button>
+        </div>
+        <a href="stats.html" class="stats-link">View Statistics</a>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
